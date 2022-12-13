@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat&family=Roboto:ital@0;1&family=Sacramento&family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Gallery Page</title>
+    <body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+       
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+    </div>
+   
+    <h1>Welcome To</h1>
+    <h1 id="sh">Our Store Photo Gallery</h1>
+
+    <div class="w3-content" style="max-width:800px;position:relative">
+
+      <img class="mySlides" src="Braai Goodies H.jpg" style="width:100%">
+      <img class="mySlides" src="Bugers & Smileys H.jpg" style="width:100%">
+      <img class="mySlides" src="Butter H.jpg" style="width:100%">
+      <img class="mySlides" src="Cheap Sweets V.jpg" style="width:100%">
+      <img class="mySlides" src="Chips H.jpg" style="width:100%">
+      <img class="mySlides" src="Conical Shelve 2 V.jpg" style="width:100%">
+      <img class="mySlides" src="Conical Shelve V.jpg" style="width:100%">
+      <img class="mySlides" src="Frozen Fish H.jpg" style="width:100%">
+      <img class="mySlides" src="Cooked Fish V.jpg" style="width:100%">
+      <img class="mySlides" src="Frozen Fish H.jpg" style="width:100%">
+      <img class="mySlides" src="Pastries H.jpg" style="width:100%">
+      <img class="mySlides" src="Shelve 1.jpg" style="width:100%">
+      <img class="mySlides" src="Shelve 2 V.jpg style="width:100%">
+      <img class="mySlides" src="Shelve 4 H.jpg style="width:100%">
+      <img class="mySlides" src="Shelve 5 H.jpg" style="width:100%">
+      <img class="mySlides" src="Shelve 6 H.jpg" style="width:100%">
+      <img class="mySlides" src="Shelve 7 H.jpg style="width:100%">
+      <img class="mySlides" src="Decor 1 H.jpg" style="width:100%">
+      <img class="mySlides" src="Decor Boards V.jpg" style="width:100%">
+
+
+
+
+
+      <a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
+      <a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
+      
+      </div>
+    
+  
+ 
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+</script>
+<script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+  
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = x.length} ;
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    x[slideIndex-1].style.display = "block";  
+  }
+  </script>
+     
+</body>
+</html>
